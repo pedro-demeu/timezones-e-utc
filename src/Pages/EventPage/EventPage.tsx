@@ -80,7 +80,7 @@ export const EventPage = ({ timezone, setUserTimezone }: EventPageProps) => {
         >
           Não perca o Show
           <Typography display="flex" color="primary" fontWeight="bold">
-            UTC: {translateTimeZone(eventTimeZone)}
+            Time zone: {translateTimeZone(eventTimeZone)}
           </Typography>
           <Typography display="flex" color="primary" fontWeight="bold">
             Data: {format(new Date(showConverted), "dd/MM/yyyy HH:mm:ss")}
