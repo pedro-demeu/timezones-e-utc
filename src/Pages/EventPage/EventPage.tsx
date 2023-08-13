@@ -27,11 +27,6 @@ export const EventPage = ({ timezone, setUserTimezone }: EventPageProps) => {
     ? utcToZonedTime(dateTimeEvent, eventTimeZone)
     : null;
 
-  console.log({
-    dateTimeEvent: new Date(dateTimeEvent).toISOString(),
-    eventTimeZone,
-    showConverted,
-  });
   return (
     <Box>
       <DateTimePicker

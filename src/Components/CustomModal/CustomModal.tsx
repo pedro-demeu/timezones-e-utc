@@ -4,18 +4,6 @@ import Modal from "@mui/material/Modal";
 import { PageNumberType } from "../../types/pages";
 import { Button } from "@mui/material";
 
-const style = {
-  position: "absolute",
-  width: "70%",
-  height: "auto",
-  overflow: "overlay",
-  bgcolor: "#242424",
-  color: "#ffffff",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
-
 interface IModal {
   open: boolean;
   handleClose: () => void;
@@ -35,13 +23,29 @@ export const CustomModal = ({
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
       sx={{
-        overflow: "scroll",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        overflow: "scroll",
       }}
     >
-      <Box sx={style}>
+      <Box
+        sx={{
+          position: "absolute",
+          width: "70%",
+          height: "80%",
+          overflow: "overlay",
+          bgcolor: "#242424",
+          color: "#ffffff",
+          border: "2px solid #000",
+          boxShadow: 24,
+          p: 4,
+          margin: "5rem 0",
+          borderRadius: "24px",
+          paddingTop: "2rem",
+
+        }}
+      >
         {pageNumber !== 0 ? (
           <ModalEventPage {...{ open, handleClose }} />
         ) : (
@@ -119,8 +123,7 @@ const ModalUserCreatedPage = ({ handleClose }: IModal) => {
       <Typography id="modal-modal-description" sx={{ mt: 2 }}>
         A data de criação do usuário é flexível e pode ser alterada conforme o
         fuso horário selecionado porque diferentes regiões do mundo têm horários
-        distintos. Cada fuso horário possui uma hora local específica, o que
-        {" "}
+        distintos. Cada fuso horário possui uma hora local específica, o que{" "}
         <b
           style={{
             backgroundColor: "#F2E205",
@@ -131,7 +134,6 @@ const ModalUserCreatedPage = ({ handleClose }: IModal) => {
           diferentes em locais diferentes.
         </b>{" "}
         <br />
-       
         <br />
         <Typography
           sx={{
