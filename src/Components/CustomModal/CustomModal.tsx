@@ -95,8 +95,8 @@ const ModalEventPage = ({ handleClose }: IModal) => {
         Quando o usuário seleciona uma data para o show usando o seletor de
         data, a página registra essa data com base no fuso horário específico
         escolhido pelo usuário. Isso significa que a data e hora escolhidas são
-        tratadas como absolutas e não são afetadas por mudanças de fuso horário do usuário.
-        Porque o fuso horário do evento já foi definido.
+        tratadas como absolutas e não são afetadas por mudanças de fuso horário
+        do usuário. Porque o fuso horário do evento já foi definido.
       </Box>
       <br />
       <br />
@@ -120,15 +120,18 @@ const ModalUserCreatedPage = ({ handleClose }: IModal) => {
         A data de criação do usuário é flexível e pode ser alterada conforme o
         fuso horário selecionado porque diferentes regiões do mundo têm horários
         distintos. Cada fuso horário possui uma hora local específica, o que
-        significa que um mesmo momento no tempo pode corresponder a horas
-        diferentes em locais diferentes. <br />
+        {" "}
+        <b
+          style={{
+            backgroundColor: "#F2E205",
+            color: "#000000",
+          }}
+        >
+          significa que um mesmo momento no tempo pode corresponder a horas
+          diferentes em locais diferentes.
+        </b>{" "}
         <br />
-        Ao considerar essa variação dos fusos horários, é necessário que a data
-        seja ajustada para que ela permaneça consistente, independentemente da
-        localização geográfica do usuário e isso é fundamental para garantir que
-        a informação seja precisa e confiável, especialmente em situações onde a
-        sincronização temporal é importante, como agendamento de compromissos,
-        rastreamento de eventos e outros registros de atividades. <br />
+       
         <br />
         <Typography
           sx={{
